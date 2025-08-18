@@ -14,3 +14,10 @@ def homepage(request):
     
     context = {"restaurant_name": restaurant_nmae}
     return render(request, "home/index.html", context)
+
+def custom_404(request, exception):
+    context = {
+        "request_path": request.path,
+    }
+
+    return render(request, "404.html", context=context, status=404)
