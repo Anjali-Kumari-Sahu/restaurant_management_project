@@ -1,2 +1,53 @@
-<h1> Welcome to {{ restaurant_name }} </h1>
-<p> Your favourite spot for delicious food </P>
+{% local static %}
+< !DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset+"UTF-8">
+    <title>{{ restaurant_name}}  | Homepage</title>
+    <link href="https://cdn.jsdeliver.net/npm/bootsrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+        font-family: "Segoe UI", Roboto, sns-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        }
+    header{
+    background: linear-gradient(90deg, #3a57e8, #6c63ff);
+    color: #fff;
+    padding: 2rem;
+    text_align: center;
+    border-redius: 0 0 20px 20px;
+    }
+    header h1{ font-size: 2.5rem; margin-bottom: .5rem;}
+    .into{
+     max-width: 800px:
+     margin: 2rem auto;
+     text-align= center;
+     }
+     .btn-custom{
+       background: #3a57e8;
+       color: #fff;
+       padding: .75rem 1.5rem;
+       border-radius: 12px;
+       text-decoration: none;
+       }
+      .btn-custom:hover {opacity: .9;}
+    </style>
+    </head>
+    <body>
+        <header>
+           <h1> Welcome to {{ restaurant_name }} </h1>
+           <p> Your favourite spot for delicious food </P>
+        </header>
+        <main class="intro">
+            <p>
+                Experience Mouth Water  dishes, warm ambience, and top - notch hospitality.
+            </p>
+            <a href="{% url 'restaurant_about' %}"  class="btn-custom"> Learn More About Us </a>
+        </main>
+        <footer class= "text-center py-4">
+            <small>&copy;{{restaurant_name}}  {{now|date : "Y"}}</small>
+         </footer>
+
+    </body>
+    </html>
