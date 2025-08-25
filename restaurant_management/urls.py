@@ -24,9 +24,11 @@ handler404 = "home.views.custom_404"
 
 urlpatterns = [
     path('admin/', restaurant_about, name="restaurant_about"),
+    path('admin/', admin.site.urls),
     path('api/',include('home.urls')),
     path('api/accounts/',include('account.urls')),
     path('api/products/',include('products.urls')),
     path('api/orders/',include('orders.urls')),
     path("restaurant/", include("restaurant_manangement.urls")),
+    path('',include("restaurant.urls")),
 ]
