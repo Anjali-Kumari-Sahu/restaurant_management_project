@@ -76,6 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'restaurant_management.wsgi.application'
+RESTAURANT_PHONE = "+91-9876543210"
 
 
 # Database
