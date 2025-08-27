@@ -31,4 +31,5 @@ urlpatterns = [
     path('api/orders/',include('orders.urls')),
     path("restaurant/", include("restaurant_manangement.urls")),
     path('',include("restaurant.urls")),
+    path('',include('home.urls')),
 ]
