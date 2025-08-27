@@ -8,7 +8,9 @@ from restaurant_management.models import restaurant_management
 
 def home(request):
     return render(request, "restaurant_management/home.html", {
-        "phone": settings.RESTAURANT_PHONE
+        "phone": settings.RESTAURANT_PHONE ,
+        "restaurant_name": "Foodie's Paradise"
+        
     })
 
 def homepage(request):
