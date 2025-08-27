@@ -2,7 +2,14 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.conf import settings
+from django.shortcuts import render
 from restaurant_management.models import restaurant_management
+
+
+def home(request):
+    return render(request, "restaurant_management/home.html", {
+        "phone": settings.RESTAURANT_PHONE
+    })
 
 def homepage(request):
     restaurant = Restaurant.objects.first()
