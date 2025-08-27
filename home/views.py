@@ -30,3 +30,6 @@ def custom_404(request, exception):
     }
 
     return render(request, "404.html", context=context, status=404)
+
+def contact(request):
+    return render(request, "contact.html")
