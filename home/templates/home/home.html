@@ -1,0 +1,15 @@
+{ % extends "base.html"  %} 
+{ % load static %}
+
+
+{% block content % }
+<div class ="homepage">
+    <div class = "logo-container">
+        <img src="{% static 'images/logo.png' %}"  alt="Restaurant Logo" class="logo">
+    </div>
+
+
+    <h1>Welcome to Our Restaurant! </h1>
+    <p> Enjoy the finest food with the best service. </p>
+</div>
+{% endblock %}
