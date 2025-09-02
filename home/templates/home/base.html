@@ -1,0 +1,16 @@
+{%  load static %}
+
+<! DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant </title>
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>&copy; {{  year }}  Restaurant Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>
