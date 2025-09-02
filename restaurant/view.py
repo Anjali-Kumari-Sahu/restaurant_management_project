@@ -10,3 +10,9 @@ def menu_list(request):
     ]
 
     return render(request, "menu.html", {"items": menu_items})
+
+def reservations(request):
+    try:
+        return render(request, "restaurant/reservations.html")
+    except Exception as e:
+        return render(request, "restaurant/error.html",  {"error": str(e)})
