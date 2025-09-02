@@ -1,0 +1,53 @@
+{ % extends "base.html"   %}
+
+{% block content %}
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0.1);
+        text-align: center; 
+    }
+
+    h1{
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: #2c3e50;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary{
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.35 ease;
+    }
+
+    .btn-primary:hover{
+        background-color: #2980b9;
+    }
+</style>
+
+<div class="home-container">
+    <h1>Welcome to Our Restaurant!</h1>
+    <p> Enjoy delicious meals, friendly service, and a cozy atmosphere.</p>
+    <a href="{% url 'reservations' %}"  class="btn-primary" >  Make a Reservation</a>
+</div>
+{% endblock %}
