@@ -4,5 +4,6 @@ from .import views
 urlpatterns = [
     path("menu/", views.menu_list, name="menu_list"),
     path("reservations/", views.reservations, name="reservations"),
+    path("feedback/", views.feedback_view, name ="feedback"),
     
 ]
