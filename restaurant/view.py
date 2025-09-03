@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, 
+from .forms import FeedbackForm
 
 def menu_list(request):
     menu_items = [
@@ -16,3 +17,13 @@ def reservations(request):
         return render(request, "restaurant/reservations.html")
     except Exception as e:
         return render(request, "restaurant/error.html",  {"error": str(e)})
+
+def feedback_view(request):
+    if request.method == "post":
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("feedback")
+    else:
+        form = FeedbackForm()
+    return render(request, "restaurant/feedback.html", {"form": form})
