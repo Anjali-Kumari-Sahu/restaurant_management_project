@@ -10,7 +10,16 @@
 </head>
 <body>
     {% block content %}{% endblock %}
-    <header>
+    <header class="site-header">
+        <div class="logo-title">
+        <nav>
+            <ul>
+                <li> <a href="{% url 'home' % }"> Home </a></li>
+                <li><a href="{% url 'menu_list' %}"> Menu</a></li>
+                <li><a href="{% url 'reservations' %}"> Reservations </a></li>
+                <li><a href="{"% url 'contact' % }"> Contact </li>
+            </ul>
+        </nav>
         <h1> foodie's Paradise </h1>
     </header>
 
