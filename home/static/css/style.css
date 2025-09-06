@@ -1,0 +1,23 @@
+.search-input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+
+    padding: 8px  15px;
+    background: #3a57e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor:pointer;
+    transition: 0.35;
+}
+
+
+.search-btn:hover  {
+     background: #6c63ff;
+}
