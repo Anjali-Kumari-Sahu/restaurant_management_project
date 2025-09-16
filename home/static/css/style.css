@@ -21,3 +21,31 @@
 .search-btn:hover  {
      background: #6c63ff;
 }
+
+.menu-section{
+    text-align: center;
+    padding: 20px;
+
+}
+.menu-list ul{
+    list-style: none;
+    padding: 0%;
+}
+.menu-item{
+    border: 1px solid #ddd;
+    border-radius: 10 px;
+    margin: 10px auto;
+    padding: 15px;
+    max-width: 500px;
+    background: #f9f9f9;
+    box-shadow: 2px 2px 6px rgba(red, green, blue, alpha);
+}
+.menu-item h3{
+    margin:0;
+    color: #d35400;
+}
+.menu-item strong{
+    display: block;
+    margin-top:5px;
+    color:#27ae60;
+}
