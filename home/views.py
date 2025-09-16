@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render
 
 # Create your views here.
@@ -7,6 +8,9 @@ from restaurant_management.models import restaurant_management
 
 
 def home(request):
+    response = requests.get("http://127.0.0.1:8000/api/menu/")
+    menu_items = response.json()  if response.status_code == 200 else []
+    return render(request, "home.html",{"menu_items": menu_items})
     return render(request, "restaurant_management/home.html", {
         "phone": settings.RESTAURANT_PHONE ,
         "restaurant_name": "Foodie's Paradise"
